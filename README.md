@@ -69,6 +69,19 @@ Realizar a instalação do wsl2 conforme o passo a passo:
     - Executar o comando "make";
     - Executar o comando "sudo make install";
     - Confirmar a instalação com o comando: "nasm --version"
+  
+4. Adaptação para funcionar codigos de 32 bits:
+    ```bash
+    sudo apt install qemu-user-static
+    sudo update-binfmts --install i386 /usr/bin/qemu-i386-static --magic '\x7fELF\x01\x01\x01\x03\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x03\x00\x01\x00\x00\x00' --mask '\xff\xff\xff\xff\xff\xff\xff\xfc\xff\xff\xff\xff\xff\xff\xff\xff\xf8\xff\xff\xff\xff\xff\xff\xff'
+    sudo dpkg --add-architecture i386
+    sudo apt install gcc:i386
+    ```
+
+Você precisará reativá-lo sempre que reiniciar o WSL e quiser suporte ao i386:
+```bash
+sudo service binfmt-support start
+```
 
 ## Codificar em assembly
 Criar um arquivo com a extensão ".s" (essa extensão não é obrigatório, mas é uma convenção);
