@@ -1,6 +1,6 @@
-# Assembly no Windows 10 x64 com WSL
+# Assembly no Windows 10 x64 com WSL :desktop_computer:
 
-- [Assembly no Windows 10 x64 com WSL](#assembly-no-windows-10-x64-com-wsl)
+- [Assembly no Windows 10 x64 com WSL :desktop\_computer:](#assembly-no-windows-10-x64-com-wsl-desktop_computer)
   - [Fontes](#fontes)
   - [WSL2](#wsl2)
   - [Dependencias Linux](#dependencias-linux)
@@ -8,12 +8,17 @@
     - [Exemplo "Hello world!":](#exemplo-hello-world)
   - [Gerar o executavel assembly](#gerar-o-executavel-assembly)
   - [Observações](#observações)
+  - [Aulas De Assembly](#aulas-de-assembly)
   - [👨🏼‍💻AUTOR](#autor)
 
 ## Fontes
-Código adaptado de código original feito por [Pedro Pessoa](https://github.com/phenpessoa): 
-- [Youtube](https://www.youtube.com/watch?v=Rpq5PDDgwxU) 
-- [Repositório](https://github.com/phenpessoa/yt-asm.git)
+✍️ Autor [Pedro Pessoa](https://github.com/phenpessoa)<br>
+🗒️ Repositório: [GitHub](https://github.com/phenpessoa/yt-asm.git)<br>
+📽️ Video **APRENDA a PROGRAMAR em ASSEMBLY!**: [Youtube](https://www.youtube.com/watch?v=Rpq5PDDgwxU) 
+____
+✍️ Autor [Blau Araujo](https://codeberg.org/blau_araujo)<br>
+🗒️ Repositório: [codeberg](https://codeberg.org/blau_araujo/assembly-nasm-x86_64/src/branch/main/pdf/aula01.pdf)<br>
+📽️ Playlist videos **Fundamentos de assembly x86-64**: [Youtube](https://www.youtube.com/watch?v=Ej6U-qk0bdE&list=PLXoSGejyuQGohd0arC7jRBqVdQqf5GqKJ) 
 
 ## WSL2
 Realizar a instalação do wsl2 conforme o passo a passo:
@@ -114,7 +119,6 @@ section .data
 
 ```
 
-
 ## Gerar o executavel assembly
 ```bash
 nasm -f elf64 filename.s -o filename.o
@@ -128,6 +132,11 @@ gcc filename.o -o filename.exe -nostdlib -no-pie
 3. Saída em meu console:
    
    ![Imagem do terminal](image.png)
+
+
+## Aulas De Assembly
+- [AULA 1](./machine_code/machine_code.md)
+- [AULA 2](./primeiro_programa/primeiro_programa.md)
 
 ## 👨🏼‍💻AUTOR
 <a href="https://github.com/MatheusLPolidoro" style="align: center" width="90px">
